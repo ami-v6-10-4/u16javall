@@ -11,7 +11,7 @@ jdk:
 build:
   pre_ci_boot:
     image_name: drydock/u16javall
-    image_tag: master
+    image_tag: v6.10.4
     pull: true
     
   ci:
@@ -20,11 +20,3 @@ build:
     - mvn --version    
     - ant -version 
     - gradle --version
-    - docker pull shippabledocker/sample_node_pvt:ecr
-    
-integrations:
-    
-  hub:
- #Docker integration
-    - integrationName: ship-docker
-      type: dockerRegistryLogin
